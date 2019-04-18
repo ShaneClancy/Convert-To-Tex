@@ -15,7 +15,7 @@ def TableToTex(file_name, hline):
     sys.stdout = table
 
     #write table baginning
-    sys.stdout.write('\\begin{{tabular}}{{')
+    sys.stdout.write('\\begin{tabular}{')
     #calculate and write column syntax
     rowSize = (len(csvfile[0]))
     for i in range(rowSize):
@@ -34,5 +34,5 @@ def TableToTex(file_name, hline):
             sys.stdout.write(str(i[j]) + ' ' + '& ')
         sys.stdout.write(str(i[rowSize - 1]) + ' \\\\\n')
     
-    sys.stdout.write('\\end{{tabular}}\n')
+    sys.stdout.write('\\end{tabular}\n')
     return
