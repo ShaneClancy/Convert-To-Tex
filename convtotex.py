@@ -36,6 +36,3 @@ def TableToTex(file_name, hline):
     
     sys.stdout.write('\\end{{tabular}}\n')
     return
-
-if __name__ == '__main__':
-    TableToTex('./Here_you_go.csv', 0)
