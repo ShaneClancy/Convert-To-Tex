@@ -22,7 +22,8 @@ def TableToTex(file_name, hline):
         sys.stdout.write('|c')
     #end table beginning
     sys.stdout.write('|}\n')
-
+    if (hline == 1):
+        sys.stdout.write('\t\\hline\n\t')
     for i in csvfile:
         #print out horizontal line if user specifies
         if (hline == 1):
@@ -33,6 +34,7 @@ def TableToTex(file_name, hline):
         for j in (range(rowSize - 1)):
             sys.stdout.write(str(i[j]) + ' ' + '& ')
         sys.stdout.write(str(i[rowSize - 1]) + ' \\\\\n')
-    
+    if (hline == 1):
+        sys.stdout.write('\t\\hline\n')
     sys.stdout.write('\\end{tabular}\n')
     return
